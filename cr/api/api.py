@@ -37,8 +37,8 @@ def report_crash(request):
         data.user_name = username
         data.crash_log = crash_log
         data.save()
-        title = '(' + data.deviceType + ')程序崩溃，点击链接查看详情:'
-        url = 'http://' + INNER_NET_URL + ':8000/crashDetail?id=' + str(data.log_id)
+        title = '(' + data.device_type + ')程序崩溃！！！'
+        url = 'http://' + INNER_NET_URL + ':8888/crashDetail?id=' + str(data.log_id)
         send_dingding_msg(title, url)
         return HttpResponse('crash log reported')
 
@@ -55,8 +55,8 @@ def send_dingding_msg(title, url):
     data = {
         'msgtype': 'link',
         'link': {
-            'title': '请注意',
-            'text': title,
+            'title': title,
+            'text': '点击链接查看详情',
             'picUrl': '',
             'messageUrl': url,
         }

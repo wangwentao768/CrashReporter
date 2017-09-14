@@ -24,11 +24,11 @@
     </tr>
     {% for log in logList %}
         <tr>
-            <td>{{ log.logId }}</td>
-            <td>{{ log.deviceType }}</td>
-            <td>{{ log.modelName }}</td>
-            <td>{{ log.osVersionCode }}</td>
-            <td><a href="{{ innerUrl }}{{ log.logId }}">点击查看</a></td>
+            <td>{{ log.log_id }}</td>
+            <td>{{ log.device_type }}</td>
+            <td>{{ log.model_name }}</td>
+            <td>{{ log.os_version_code }}</td>
+            <td><a href="{{ innerUrl }}{{ log.log_id }}">点击查看</a></td>
         </tr>
     {% endfor %}
 </table>

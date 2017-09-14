@@ -6,16 +6,16 @@
 </head>
 <body>
 <ul>
-    <li style="padding: 10px;">设备类型:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.deviceType }}</li>
-    <li style="padding: 10px;">包名:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.packageName }}</li>
-    <li style="padding: 10px;">版本名:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.versionName }}</li>
-    <li style="padding: 10px;">版本号:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.versionCode }}</li>
-    <li style="padding: 10px;">系统版本:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.osVersionCode }}</li>
-    <li style="padding: 10px;">设备名称:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.modelName }}</li>
-    <li style="padding: 10px;">网络状态:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.netState }}</li>
-    <li style="padding: 10px;">错误等级:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.errorLevel }}</li>
+    <li style="padding: 10px;">设备类型:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.device_type }}</li>
+    <li style="padding: 10px;">包名:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.package_name }}</li>
+    <li style="padding: 10px;">版本名:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.version_name }}</li>
+    <li style="padding: 10px;">版本号:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.version_code }}</li>
+    <li style="padding: 10px;">系统版本:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.os_version_code }}</li>
+    <li style="padding: 10px;">设备名称:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.model_name }}</li>
+    <li style="padding: 10px;">网络状态:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.net_state }}</li>
+    <li style="padding: 10px;">错误等级:&nbsp;&nbsp;&nbsp;&nbsp;{{ log.error_level }}</li>
     <li style="padding: 10px;">日志内容:</li>
-    {{ log.crashLog }}
+    {{ log.crash_log }}
 </ul>
 <div style="text-align: center">
     <a href="{{ innerUrl }}">查看该版本所有崩溃</a>
