@@ -13,8 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.conf.urls import url
 from django.contrib import admin
+from django.views.static import serve
 
 from cr.api.api import report_crash
 from cr.views import crash_detail
@@ -25,4 +27,5 @@ urlpatterns = [
     url(r'^reportCrash/', report_crash, name='crash report'),
     url(r'^crashDetail/', crash_detail, name='crash detail'),
     url(r'^logList/', crash_list, name='crash list'),
+    url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT})
 ]
